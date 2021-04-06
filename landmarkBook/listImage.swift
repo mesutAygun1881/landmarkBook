@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct listImage: View {
+    var imageList : String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(imageList)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 50, height: 50, alignment: .leading)
     }
 }
 
 struct listImage_Previews: PreviewProvider {
     static var previews: some View {
-        listImage()
+        listImage(imageList: "izmir")
     }
 }

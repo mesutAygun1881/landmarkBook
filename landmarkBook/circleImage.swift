@@ -7,14 +7,20 @@
 
 import SwiftUI
 
-struct circleImage: View {
+struct CircleImage : View {
+    var image : Image
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        image
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .clipShape(Circle())
+            .overlay(Circle().stroke(Color.white))
+            .shadow(radius: 15 )
+     
     }
 }
-
 struct circleImage_Previews: PreviewProvider {
     static var previews: some View {
-        circleImage()
+        CircleImage(image: Image("izmir"))
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct landmarkBookApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            detailsView(chosenLandmark: izmirLandmark)
         }
     }
 }

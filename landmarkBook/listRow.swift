@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct listRow: View {
+    var landmark : cityName
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            listImage(imageList: landmark.imageName).padding().padding()
+            Text(landmark.name)
+        }
     }
 }
 
 struct listRow_Previews: PreviewProvider {
     static var previews: some View {
-        listRow()
+        listRow(landmark: izmirLandmark)
     }
 }

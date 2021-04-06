@@ -9,7 +9,15 @@ import SwiftUI
 
 struct listCity: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+        List(landmarkArray){landmark in
+            NavigationLink(
+                destination: detailsView(chosenLandmark: landmark))
+            {
+                listRow(landmark: landmark)
+                }
+        }
+        }.navigationBarTitle("LANDBOOK")
     }
 }
 
